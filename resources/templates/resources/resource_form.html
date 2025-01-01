@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Resource - RuralConnect{% endblock %}
+
+{% block content %}
+<h1>Add Resource</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add Resource</button>
+</form>
+{% endblock %}

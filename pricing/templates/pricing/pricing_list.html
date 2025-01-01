@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Pricing Updates - RuralConnect{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-6">Pricing Updates</h1>
+    <div class="overflow-x-auto">
+        <table class="w-full bg-white shadow-md rounded-lg overflow-hidden">
+            <thead class="bg-green-500 text-white">
+                <tr>
+                    <th class="py-3 px-4 text-left">Product</th>
+                    <th class="py-3 px-4 text-left">Price</th>
+                    <th class="py-3 px-4 text-left">Change</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for update in price_updates %}
+                    <tr class="border-b border-gray-200 hover:bg-gray-100">
+                        <td class="py-3 px-4">{{ update.product }}</td>
+                        <td class="py-3 px-4">₹{{ update.price }}</td>
+                        <td class="py-3 px-4 {% if update.change >= 0 %}text-green-600{% else %}text-red-600{% endif %}">
+                            {% if update.change >= 0 %}+{% endif %}{{ update.change }}
+                        </td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="3" class="py-3 px-4 text-center text-gray-500">No price updates available at the moment.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
+

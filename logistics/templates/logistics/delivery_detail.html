@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Delivery {{ delivery.order_id }} - RuralConnect{% endblock %}
+
+{% block content %}
+<h1>Delivery {{ delivery.order_id }}</h1>
+<p>Status: {{ delivery.status }}</p>
+<p>Pickup Address: {{ delivery.pickup_address }}</p>
+<p>Delivery Address: {{ delivery.delivery_address }}</p>
+<p>Created At: {{ delivery.created_at }}</p>
+<p>Updated At: {{ delivery.updated_at }}</p>
+{% endblock %}

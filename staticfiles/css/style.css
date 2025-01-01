@@ -1,0 +1,246 @@
+        /* static/css/style.css */
+
+/* Global Styles */
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #45a049;
+    --text-color: #333;
+    --background-color: #ffffff;
+    --light-green: #e8f5e9;
+    --light-blue: #e3f2fd;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+/* Main Content Styles */
+main {
+    padding: 2rem 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+/* Card Styles */
+.card {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Grid Styles */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+.grid-container {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.grid-item {
+    flex: 1;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+/* Form Styles */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--light-green);
+    font-weight: bold;
+}
+
+/* Specific Page Styles */
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.features {
+    background-color: var(--light-green);
+    padding: 2rem 0;
+}
+
+.for-producers {
+    background-color: var(--light-green);
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.for-buyers {
+    background-color: var(--light-blue);
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+.media-box {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.container .nav-brand .goback{
+    color: white;
+    font-weight: larger;
+    text-decoration: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

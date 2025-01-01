@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Farming Resources - RuralConnect{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-6">Farming Resources</h1>
+    
+    {% if error %}
+        <div class="error-message">
+            <p>Error: {{ error }}</p>
+        </div>
+    {% endif %}
+
+    <div class="resource-grid">
+        {% if resources %}
+            {% for resource in resources %}
+                <div class="resource-card">
+                    {% if resource.preview_image %}
+                        <img src="{{ resource.preview_image.url }}" alt="{{ resource.title }}" class="resource-image">
+                    {% else %}
+                        <div class="resource-image bg-gray-200 flex items-center justify-center">
+                            <span class="text-gray-500">No image available</span>
+                        </div>
+                    {% endif %}
+                    <div class="resource-content">
+                        <h2 class="resource-title">{{ resource.title }}</h2>
+                        <p class="resource-description">{{ resource.description }}</p>
+                        <div class="resource-meta">
+                            <p class="resource-category">Category: {{ resource.get_category_display }}</p>
+                            <p class="resource-date">Published: {{ resource.publication_date|date:"F d, Y" }}</p>
+                        </div>
+                        <a href="{{ resource.source_url }}" target="_blank" rel="noopener noreferrer" class="resource-link">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="col-span-3">
+                <div class="no-resources-message">
+                    <p class="text-center">No resources available. Please make sure:</p>
+                    <ul class="no-resources-list">
+                        <li>You have run python manage.py migrate</li>
+                        <li>You have run python manage.py add_sample_resources</li>
+                        <li>The database connection is working properly</li>
+                    </ul>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+

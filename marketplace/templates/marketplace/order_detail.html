@@ -1,0 +1,19 @@
+<!-- templates/marketplace/order_detail.html -->
+{% extends 'base.html' %}
+
+{% block title %}Order #{{ order.id }} - RuralConnect{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Order Details</h1>
+    <div class="order-detail">
+        <p><strong>Order ID:</strong> #{{ order.id }}</p>
+        <p><strong>Product:</strong> {{ order.product.name }}</p>
+        <p><strong>Quantity:</strong> {{ order.quantity }}</p>
+        <p><strong>Total Price:</strong> ${{ order.total_price }}</p>
+        <p><strong>Status:</strong> {{ order.get_status_display }}</p>
+        <p><strong>Order Date:</strong> {{ order.created_at }}</p>
+        <p><strong>Last Updated:</strong> {{ order.updated_at }}</p>
+    </div>
+</div>
+{% endblock %}

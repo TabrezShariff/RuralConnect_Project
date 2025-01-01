@@ -1,0 +1,45 @@
+<!-- templates/index.html -->
+{% extends 'base.html' %}
+
+{% block title %}Welcome to RuralConnect{% endblock %}
+
+{% block content %}
+<section id="home" class="hero">
+    <div class="container">
+        <h1>Welcome to RuralConnect</h1>
+        <p>Bridging the gap between rural producers and urban consumers, empowering farmers and artisans.</p>
+        <div class="cta-buttons">
+            <a href="{% url 'marketplace:product_list' %}" class="btn">Start Selling</a>
+            <a href="{% url 'marketplace:product_list' %}" class="btn">Start Shopping</a>
+        </div>
+    </div>
+</section>
+
+<section id="features" class="features">
+    <div class="container">
+        <h2>Our Features</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>Marketplace</h3>
+                <p>Connect directly with buyers and sellers in our digital marketplace.</p>
+                <a href="{% url 'marketplace:product_list' %}" class="btn">Visit Marketplace</a>
+            </div>
+            <div class="feature-card">
+                <h3>Price Updates</h3>
+                <p>Get real-time updates on market prices for agricultural products.</p>
+                <a href="{% url 'pricing:price_list' %}" class="btn">Check Prices</a>
+            </div>
+            <div class="feature-card">
+                <h3>Logistics</h3>
+                <p>Efficient delivery and transportation services for your products.</p>
+                <a href="{% url 'logistics:delivery_list' %}" class="btn">Arrange Delivery</a>
+            </div>
+            <div class="feature-card">
+                <h3>Resources</h3>
+                <p>Access valuable farming guides and market information.</p>
+                <a href="{% url 'resources:resource_list' %}" class="btn">View Resources</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

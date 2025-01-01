@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ resource.title }} - RuralConnect{% endblock %}
+
+{% block content %}
+<h1>{{ resource.title }}</h1>
+<p>Category: {{ resource.get_category_display }}</p>
+<div>{{ resource.content|linebreaks }}</div>
+{% endblock %}

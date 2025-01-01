@@ -1,0 +1,453 @@
+        /* static/css/style.css */
+
+/* Global Styles */
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #45a049;
+    --text-color: #333;
+    --background-color: #ffffff;
+    --light-green: #e8f5e9;
+    --light-blue: #e3f2fd;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+/* Main Content Styles */
+main {
+    padding: 2rem 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+/* Card Styles */
+.card {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Grid Styles */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+.grid-container {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.grid-item {
+    flex: 1;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+/* Form Styles */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--light-green);
+    font-weight: bold;
+}
+
+/* Specific Page Styles */
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.features {
+    background-color: var(--light-green);
+    padding: 2rem 0;
+}
+
+.for-producers {
+    background-color: var(--light-green);
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.for-buyers {
+    background-color: var(--light-blue);
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+.media-box {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.container .nav-brand .goback{
+    color: white;
+    font-weight: larger;
+    text-decoration: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-brand a{
+    font-family: Arial, sans-serif;
+    color: white;
+    text-decoration: none;
+
+}
+
+/* Add to your static/css/style.css */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: center;
+}
+
+.product-info {
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.price {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.seller {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.product-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.product-detail-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.order-detail {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .product-detail {
+        grid-template-columns: 1fr;
+    }
+}
+
+.logo{
+    width: 25%;
+    height: 25%;
+    object-fit: 'cover';
+    position: relative;
+    top: 5%;
+}
+
+/* Existing styles remain unchanged */
+
+/* Add these new styles for Resources page */
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+@media (min-width: 768px) {
+    .resource-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .resource-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.resource-card {
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.resource-image {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+}
+
+.resource-content {
+    padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.resource-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.resource-description {
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+    flex-grow: 1;
+}
+
+.resource-meta {
+    font-size: 0.875rem;
+    color: #718096;
+    margin-bottom: 1rem;
+}
+
+.resource-category {
+    margin-bottom: 0.25rem;
+}
+
+.resource-date {
+    margin-bottom: 1rem;
+}
+
+.resource-link {
+    display: block;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.resource-link:hover {
+    background-color: var(--secondary-color);
+}
+
+.error-message {
+    background-color: #fed7d7;
+    border: 1px solid #feb2b2;
+    color: #9b2c2c;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.no-resources-message {
+    background-color: #fefcbf;
+    border: 1px solid #faf089;
+    color: #744210;
+    padding: 1rem;
+    border-radius: 0.25rem;
+}
+
+.no-resources-list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+
+
+

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Create Order - RuralConnect{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-6">Create Order for {{ product.name }}</h1>
+    <div class="bg-white rounded-lg shadow-md p-6">
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-4">
+                <label for="{{ form.quantity.id_for_label }}" class="block text-gray-700 font-bold mb-2">Quantity:</label>
+                {{ form.quantity }}
+            </div>
+            <div class="mb-4">
+                <label for="{{ form.shipping_address.id_for_label }}" class="block text-gray-700 font-bold mb-2">Shipping Address:</label>
+                {{ form.shipping_address }}
+            </div>
+            <button type="submit" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
+                Place Order
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+

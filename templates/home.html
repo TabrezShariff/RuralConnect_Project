@@ -1,0 +1,26 @@
+<!-- templates/home.html -->
+{% extends 'base.html' %}
+
+{% block title %}Welcome to RuralConnect{% endblock %}
+
+{% block content %}
+
+
+<div class="hero">
+    <h1 class="typing-text">Welcome to RuralConnect</h1>
+    <p>Bridging the gap between rural producers and urban consumers, empowering farmers and artisans.</p>
+</div>
+
+<div class="grid">
+    <div class="for-producers">
+        <h2>For Producers</h2>
+        <p>Sell your products directly to urban buyers, get fair prices, and access resources to improve your production.</p>
+        <a href="{% url 'marketplace:create_product' %}" class="btn">Start Selling</a>
+    </div>
+    <div class="for-buyers">
+        <h2>For Buyers</h2>
+        <p>Discover authentic rural products, support local artisans and farmers, and enjoy fresh produce delivered to your doorstep.</p>
+        <a href="{% url 'marketplace:product_list' %}" class="btn">Start Shopping</a>
+    </div>
+</div>
+{% endblock %}

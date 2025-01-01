@@ -1,0 +1,28 @@
+<!-- templates/marketplace/product_detail.html -->
+{% extends 'base.html' %}
+
+{% block title %}{{ product.name }} - RuralConnect{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="product-detail">
+        {% if product.image %}
+            <img src="{{ product.image.url }}" alt="{{ product.name }}" class="product-detail-image">
+        {% endif %}
+        <div class="product-info">
+            <h1>{{ product.name }}</h1>
+            <p class="price">₹{{ product.price }}</p>
+            <p class="seller">Seller: {{ product.seller.username }}</p>
+            <p class="description">{{ product.description }}</p>
+            
+            {% if user.is_authenticated and user != product.seller %}
+                <form method="post" action="{% url 'marketplace:create_order' product.pk %}">
+                    {% csrf_token %}
+                    {{ order_form.as_p }}
+                    <button type="submit" class="btn">Place Order</button>
+                </form>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

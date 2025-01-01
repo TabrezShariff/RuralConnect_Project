@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Order Summary - RuralConnect{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-6">Order Summary</h1>
+    <div class="bg-white rounded-lg shadow-md p-6">
+        <h2 class="text-2xl font-semibold mb-4">Order #{{ order.id }}</h2>
+        <div class="mb-4">
+            <strong>Product:</strong> {{ order.product.name }}
+        </div>
+        <div class="mb-4">
+            <strong>Quantity:</strong> {{ order.quantity }}
+        </div>
+        <div class="mb-4">
+            <strong>Total Price:</strong> ${{ order.total_price }}
+        </div>
+        <div class="mb-4">
+            <strong>Shipping Address:</strong><br>
+            {{ order.shipping_address }}
+        </div>
+        <div class="mb-4">
+            <strong>Order Date:</strong> {{ order.created_at }}
+        </div>
+        <a href="{% url 'marketplace:product_list' %}" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+            Back to Marketplace
+        </a>
+    </div>
+</div>
+{% endblock %}
+
