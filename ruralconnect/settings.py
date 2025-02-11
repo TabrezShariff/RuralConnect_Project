@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-x4ni_2pgx^ab%62#=$o8o=mhb-x!sjw94rx(apl&@qoh$#&p!f'
+SECRET_KEY = 'Your_secret_key'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -92,7 +92,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'ruralconnect_db',
         'USER': 'ruralconnect_user',
-        'PASSWORD': 'T0m_8447.',  # Use the password you set in step 2
+        'PASSWORD': 'Your_db_password.',  # Use the password you set in step 2
         'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {
